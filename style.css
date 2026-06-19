@@ -287,3 +287,18 @@ input[type="checkbox"],
     }
 
 }
+
+.company-address{
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.additional-info .email a {
+    color: #ffffff !important;         
+    text-decoration: underline;       
+}
+
+.additional-info .address-link:hover {
+    text-decoration: underline; 
+    color: white !important;    
+}
