@@ -268,26 +268,6 @@
                     </div>
                 </div>
             </main>
-
-            <main class="main-container">
-                <div class="about-card">
-                    <h1>Is my phone eSIM compatible?</h1>
-                    <div class="scroll-content">
-                        <address class= "company-address">
-                            <span class="address-line">34 Morsim road <br> </span>
-                            <span class="address-location">Hyde Park, Johannesburg <br> </span>
-                            <span class="address-postcode">2196</span>
-                        </address>
-                        <br>
-                    <div class="additional-info">
-                        <span class="hours">Operating Hours: <br></span>
-                        <span class="time">(MON-FRI 8:00AM - 5:00PM) <br></span>
-                        <span class="email"><a href="mailto:support@turnmeon.co.za">support@turnmeon.co.za</a><br></span>
-
-                    </div>
-                    </div>
-                </div>
-            </main>
                
         </div>
     </div> 
@@ -309,10 +289,6 @@
             <span class="nav-indicator"></span>
             <span class="tab-label">Contact Us</span>
         </button>
-        <button class="nav-tab" data-target="4">
-            <span class="nav-indicator"></span>
-            <span class="tab-label">eSIM compatible?</span>
-        </button>
     </nav>
 
    <script>
@@ -325,7 +301,7 @@
                 tab.classList.add('active');
                 
                 const targetIndex = tab.getAttribute('data-target');
-                const slideDistance = targetIndex * -20; 
+                const slideDistance = targetIndex * -25; 
                 track.style.transform = `translateX(${slideDistance}%)`;
             });
         });
