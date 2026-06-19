@@ -153,6 +153,7 @@ header {
 .main-container h1 {
     color: white;
     margin-bottom: 20px;
+    font-weight: 900;
 }
 
 .bottom-nav {
