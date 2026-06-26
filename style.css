@@ -304,6 +304,43 @@ input[type="checkbox"],
     text-decoration: underline; 
     color: white !important;    
 }
-.textarea{
-    margin: 10px;
+
+.textarea {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.textarea input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;               
+    outline: none;              
+    background-color: #ffffff;  
+    color: #333333;
+    box-sizing: border-box;   
+}
+ 
+.search-button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.search-button button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a157d;  
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 25px;        
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.search-button button:hover {
+    background-color: #5c1b9b;
 }
