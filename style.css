@@ -347,3 +347,11 @@ input[type="checkbox"],
 .bottom-info {
     margin-top: 20px;
 }
+
+.dropdown-card {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+

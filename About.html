@@ -278,14 +278,14 @@
                 </div>
                     
                 <div class="textarea">
-                    <input type="text" name="Search" id="Search" placeholder="Search">
+                    <input type="text" name="Search" id="Search" placeholder="Search" required>
                 </div>
 
                 <div class="search-button">
                     <button type="button">Search</button>
                 </div>
 
-                <div class ="bottom-info">
+                <div class ="bottom-info" id="bottom-text">
                     <p>* Sometimes results are not always clear. Try provide as much information a possible to get best results (Full make and model)
                         <br>
                         <br>
@@ -302,12 +302,12 @@
                 <div class="results-specs">
 
                 <div>
-                    <span class="spec-label">Make</span>
+                    <span class="spec-label" id="phonetype">Make</span>
                     <span class="spec-value">Honor</span>
                 </div>
 
                 <div>
-                    <span class="spec-label">Model</span>
+                    <span class="spec-label" id="phonemodel">Model</span>
                     <span class="spec-value">Varies by specific Honor phone model</span>
                 </div>
                 </div>
@@ -350,36 +350,40 @@
     </nav>
 
    <script>
-        const tabs = document.querySelectorAll('.nav-tab');
-        const track = document.getElementById('sliderTrack');
+    const tabs = document.querySelectorAll('.nav-tab');
+    const track = document.getElementById('sliderTrack');
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                const targetIndex = tab.getAttribute('data-target');
-                const slideDistance = targetIndex * -20; 
-                track.style.transform = `translateX(${slideDistance}%)`;
-            });
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            const targetIndex = tab.getAttribute('data-target');
+            const slideDistance = targetIndex * -20; 
+            track.style.transform = `translateX(${slideDistance}%)`;
         });
+    });
+    const searchButton = document.querySelector('.search-button button');
+    const resultsCard = document.getElementById('results-card');
+    const closeResultsBtn = document.getElementById('close-button');
+    const bottomText = document.getElementById('bottom-text'); 
+    
 
-        // --- NEW: Query Button Interaction Logic ---
-   // Show the dropdown card when "Search" button is pressed
-        if (queryBtn && resultsCard) {
-            queryBtn.addEventListener('click', () => {
-                resultsCard.style.display = 'block';
-            });
-        }
+    if (searchButton && resultsCard) {
+    searchButton.addEventListener('click', () => {
+        resultsCard.style.display = 'block';
+        if (bottomText) bottomText.style.display = 'none'; 
+    });
+}
 
-        // Hide the dropdown card if they click the close "X" icon
-        if (closeResultsBtn && resultsCard) {
-            closeResultsBtn.addEventListener('click', () => {
-                resultsCard.style.display = 'none';
-            });
-        }
+if (closeResultsBtn && resultsCard) {
+    closeResultsBtn.addEventListener('click', () => {
+        resultsCard.style.display = 'none';
+        if (bottomText) bottomText.style.display = 'block'; 
+    });
+}
+
     </script>
-
 
 </body>
 </html>
