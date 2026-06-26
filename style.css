@@ -320,7 +320,7 @@ input[type="checkbox"],
     color: #333333;
     box-sizing: border-box;   
 }
- 
+
 .search-button {
     width: 100%;
     margin-top: 15px;
@@ -343,4 +343,7 @@ input[type="checkbox"],
 
 .search-button button:hover {
     background-color: #5c1b9b;
+}
+.bottom-info {
+    margin-top: 20px;
 }
