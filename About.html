@@ -287,8 +287,39 @@
 
                 <div class ="bottom-info">
                     <p>* Sometimes results are not always clear. Try provide as much information a possible to get best results (Full make and model)
-                        For a formal definition of an eSIM, <a href="https://en.wikipedia.org/wiki/ESIM">click here</a> </p>
+                        <br>
+                        <br>
+                        For a formal definition of an eSIM, <a href="https://en.wikipedia.org/wiki/ESIM">click here</a> 
+                    </p>
                 </div>
+
+                <div class="dropdown-card" id="results-card" style="display: none;">
+                    <div class="results-header">
+                        <span class="close-results" id="close-button">&times;</span>
+                        <p>The Honor Varies by specific Honor phone model is not eSIM compatible</p>
+                </div>
+
+                <div class="results-specs">
+
+                <div>
+                    <span class="spec-label">Make</span>
+                    <span class="spec-value">Honor</span>
+                </div>
+
+                <div>
+                    <span class="spec-label">Model</span>
+                    <span class="spec-value">Varies by specific Honor phone model</span>
+                </div>
+                </div>
+
+                <div class="results-description">
+                    <span class="spec-label">Description</span>
+                    <p class="results-details">
+                    As of my last update, no Honor phone models officially support eSIM. Honor typically uses physical SIM card slots (single or dual Nano-SIM) across their smartphone range. eSIM technology is not integrated into their current hardware or software.
+                    </p>
+                </div>
+                </div>
+        
                 
             </main>
                
@@ -332,6 +363,21 @@
                 track.style.transform = `translateX(${slideDistance}%)`;
             });
         });
+
+        // --- NEW: Query Button Interaction Logic ---
+   // Show the dropdown card when "Search" button is pressed
+        if (queryBtn && resultsCard) {
+            queryBtn.addEventListener('click', () => {
+                resultsCard.style.display = 'block';
+            });
+        }
+
+        // Hide the dropdown card if they click the close "X" icon
+        if (closeResultsBtn && resultsCard) {
+            closeResultsBtn.addEventListener('click', () => {
+                resultsCard.style.display = 'none';
+            });
+        }
     </script>
 
 
