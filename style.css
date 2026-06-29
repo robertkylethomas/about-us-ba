@@ -349,9 +349,19 @@ input[type="checkbox"],
 }
 
 .dropdown-card {
-    border: 5px solid black;
+    border: 2px solid white;
+    border-radius: 20px;
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
 }
-
+#close-button{
+    margin-top: 10px;
+}
+.close-results p{
+    text-align: left;
+}
+#phonetype{
+    padding: 10px;
+    margin: ;
+}
 
