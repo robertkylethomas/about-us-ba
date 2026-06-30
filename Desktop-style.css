@@ -68,7 +68,6 @@ body {
     text-decoration: underline;
 }
 
-/* RIGHT SIDE NESTED INNER GLASS BOX */
 .faq-column {
     flex: 1.6;
     background: rgba(20, 10, 35, 0.35); 
